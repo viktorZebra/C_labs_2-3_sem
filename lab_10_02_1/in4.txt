@@ -1,0 +1,14 @@
+LIP
+STICK
+0
+LIP
+STICK
+0
+LIP
+STICK
+0
+LIP
+STICK
+0
+nothing
+COUNT

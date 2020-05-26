@@ -1,0 +1,138 @@
+﻿
+#### Первая ошибка:
+```
+lab_01_2_2.c:1:1: error: unknown type name 'include'
+ include studio.h
+ ^~~~~~~
+ ```
+ 
+
+Компилятор посчитал "include" именем типа данных
+```
+@@ -1,4 +1,4 @@
+-include studio.h
++#include studio.h
+```
+
+#### Вторая ошибка:
+```
+lab_01_2_2.c:1:10: error: #include expects "FILENAME" or <FILENAME>
+ #include studio.h
+          ^~~~~~
+```
+Отсутствие "" или <> 
+```
+@@ -1,4 +1,4 @@
+-include studio.h
++#include studio.h
+```
+
+#### Третья ошибка:
+```
+lab_01_2_2.c:1:10: fatal error: studio.h: No such file or directory
+ #include <studio.h>
+```
+Отсутствие подключаемого файла
+```
+@@ -1,4 +1,4 @@
+-include <studio.h>
++#include <stdio.h>
+```
+#### Четвертая ошибка:
+```
+lab_01_2_2.c:3:5: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ main{}
+     ^
+```
+Неправильное строение функции
+```
+@@ -1,9 +1,9 @@
+ #include <stdio.h>
+
+-main{}
+-(
++int main()
++{
+     int s;
+
+     s: = 56;
+     print (Year has a weeks)
+-)
+\ No newline at end of file
++}
+\ No newline at end of file
+```
+
+#### Пятая ошибка:
+```
+lab_01_2_2.c:7:8: error: expected expression before '=' token
+     s: = 56;
+```
+Неправильный синтаксис выражения
+```
+@@ -4,6 +4,6 @@ int main()
+ {
+     int s;
+
+-    s: = 56;
++    s = 56;
+     print (Year has a weeks)
+ }
+```
+#### Шестая ошибка;
+```
+lab_01_2_2.c:8:5: warning: implicit declaration of function 'print'; did you mean 'printf'? [-Wimplicit-function-declaration]
+     print (Year has a weeks)
+```
+Ошибка в имени функции
+```
+@@ -5,5 +5,5 @@ int main()
+     int s;
+
+     s = 56;
+-    print (Year has a weeks)
++    printf(Year has a weeks)
+ }
+```
+#### Седьмая ошибка:
+```
+lab_01_2_2.c:8:12: error: 'Year' undeclared (first use in this function); did you mean 'char'?
+     printf(Year has a weeks)
+            ^~~~
+```
+Использование необъявленной переменной. В данном случае предполагалось использование типа "строки".
+```
+@@ -5,5 +5,5 @@ int main()
+     int s;
+
+     s = 56;
+-    printf(Year has a weeks)
++    printf("Year has a weeks")
+ }
+```
+#### Восьмая ошибка:
+```
+lab_01_2_2.c:8:31: error: expected ';' before '}' token
+     printf("Year has a weeks")
+```
+Отсутствие ';' в конце строки
+```
+-    printf("Year has a weeks")
++    printf("Year has a weeks");
+```
+#### Девятая ошибка:
+```
+lab_01_2_2.c:5:9: warning: variable 's' set but not used [-Wunused-but-set-variable]
+     int s;
+```
+Неиспользование объявленной переменной
+```
+-    printf("Year has a weeks");
++    printf("Year has a %d weeks", s);
+```
+#### Десятая ошибка:
+
+Отсутствие return 0; в конце функции
+```
++    return 0;
+```

@@ -1,0 +1,19 @@
+Input first string:
+a. b, c? d! e; f: j-
+Input second string:
+a j
+Result:
+a yes
+
+b no
+
+c no
+
+d no
+
+e no
+
+f no
+
+j yes
+

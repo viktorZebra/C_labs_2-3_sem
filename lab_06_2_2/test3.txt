@@ -1,0 +1,7 @@
+Input first string:
+11111111111111111
+Input second string:
+1
+
+Process returned 1 (0x1)   execution time : 9.277 s
+Press any key to continue.

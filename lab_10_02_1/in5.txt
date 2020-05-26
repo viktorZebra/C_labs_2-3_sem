@@ -1,0 +1,11 @@
+AAA
+cc
+1000
+AAA
+bb
+100
+AAA
+aa
+10
+nothing
+NAME

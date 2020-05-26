@@ -1,0 +1,12 @@
+Input first string:
+a     a bb   f  e
+Input second string:
+f e
+Result:
+a no
+
+bb no
+
+f yes
+
+e yes
